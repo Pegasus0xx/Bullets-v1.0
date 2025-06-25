@@ -15,6 +15,14 @@ if ! command -v nuclei &>/dev/null; then
   exit 1
 fi
 
+NUCLEI_VERSION=$(nuclei --version 2>&1 | grep "Nuclei Engine Version" | head -n1 | cut -d':' -f2 | tr -d ' v')
+REQUIRED_VERSION="3.3.5"
+
+if [ "$NUCLEI_VERSION" != "$REQUIRED_VERSION" ]; then
+  echo -e "${RED}[!] nuclei version $REQUIRED_VERSION is required, but version $NUCLEI_VERSION is installed.${NC}"
+  exit 1
+fi
+
 if [ -z "$1" ]; then
   echo -e "${RED}Usage: $0 <APK_FILE>${NC}"
   exit 1
@@ -25,7 +33,7 @@ NUCLEI_TEMPLATE_PATH="$HOME/Templates"
 timestamp=$(date +%s)
 APK_FOLDER="${APK_FILE}_${timestamp}"
 
-echo -e "${YELLOW}[*] Decoding file: $APK_FILE into folder: $APK_FOLDER${NC}"
+echo -e "${YELLOW}[*] Decompiling APK file: $APK_FILE into folder: $APK_FOLDER${NC}"
 apktool d "$APK_FILE" -o "$APK_FOLDER" &>/dev/null
 
 echo -e "${GREEN}[+] Scanning folder: $APK_FOLDER with nuclei${NC}"
