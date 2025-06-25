@@ -85,6 +85,8 @@ chmod +x bullets.sh
 
 ![Bullets Screenshot](https://github.com/Pegasus0xx/Bullets-v1.0/blob/main/img.jpg?raw=true)
 
+![Bullets Screenshot](https://github.com/Pegasus0xx/Bullets-v1.0/blob/main/http_credentials.png?raw=true)
+
 ---
 
 ## 💬 Contact
