@@ -1,0 +1,13 @@
+id: urls
+info:
+  name: URLs
+  author: Pegasus
+  severity: info
+  description: Extracts URLs
+file:
+  - extensions:
+      - all
+    extractors:
+      - type: regex
+        regex:
+          - "(https?://(?:(?:[A-Za-z0-9-]+\\.)+[A-Za-z]{2,})(?::\\d+)?(?:/[\\S]*)?)"

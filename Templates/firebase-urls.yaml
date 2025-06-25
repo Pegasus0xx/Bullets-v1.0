@@ -1,0 +1,15 @@
+id: firebase-urls
+info:
+  name: Firebase URLs
+  author: Pegasus
+  severity: medium
+  description: Extracts Firebase URLs
+
+file:
+  - extensions:
+      - all
+
+    extractors:
+      - type: regex
+        regex:
+          - "https://[a-z0-9-]+\\.firebaseio\\.com"

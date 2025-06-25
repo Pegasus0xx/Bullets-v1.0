@@ -1,0 +1,15 @@
+id: google-api-keys
+info:
+  name: Google API Keys
+  author: Pegasus
+  severity: info
+  description: Extracts Google API keys
+
+file:
+  - extensions:
+      - all
+
+    extractors:
+      - type: regex
+        regex:
+          - "AIza[0-9A-Za-z-_]{35}"

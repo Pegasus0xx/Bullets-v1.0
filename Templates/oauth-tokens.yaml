@@ -1,0 +1,16 @@
+id: oauth-tokens
+info:
+  name: OAuth Tokens
+  author: Pegasus
+  severity: high
+  description: Extracts OAuth tokens
+
+file:
+  - extensions:
+      - all
+
+    extractors:
+      - type: regex
+        regex:
+          - "ya29\\.[A-Za-z0-9-_]+"
+          - "Bearer\\s[A-Za-z0-9-_]+"
