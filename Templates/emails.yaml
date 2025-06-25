@@ -1,0 +1,15 @@
+id: emails
+info:
+  name: Emails
+  author: Pegasus
+  severity: info
+  description: Extracts email
+
+file:
+  - extensions:
+      - all
+
+    extractors:
+      - type: regex
+        regex:
+          - "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}"
