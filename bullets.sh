@@ -29,7 +29,7 @@ echo -e "${YELLOW}[*] Decoding file: $APK_FILE into folder: $APK_FOLDER${NC}"
 apktool d "$APK_FILE" -o "$APK_FOLDER" &>/dev/null
 
 echo -e "${GREEN}[+] Scanning folder: $APK_FOLDER with nuclei${NC}"
-echo "$APK_FOLDER" | nuclei -t "$NUCLEI_TEMPLATE_PATH" | \
+echo "$APK_FOLDER" | nuclei -file "$NUCLEI_TEMPLATE_PATH" | \
 grep -Pv "(w3|android|github|schemas\.android|google|goo\.gl|apache\.org|ns\.adobe\.com|schemas\.microsoft\.com|developer\.apple\.com|apple\.com|default\.url)"
 
 echo -e "${YELLOW}[*] Extracting HTTP Auth credentials from smali files...${NC}"
