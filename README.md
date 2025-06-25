@@ -41,20 +41,22 @@ You can install it in one of two ways:
 #### 🅐 Go install:
 
 ```bash
-go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
+go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@3.3.5
 ```
 
 #### 🅑 Manual method:
 
 ```bash
-git clone https://github.com/projectdiscovery/nuclei.git; \
-cd nuclei/cmd/nuclei; \
+wget https://github.com/projectdiscovery/nuclei/archive/refs/tags/v3.3.5.zip; \
+unzip v3.3.5.zip; \
+cd nuclei-3.3.5/cmd/nuclei; \
 go build; \
 mv nuclei /usr/local/bin/; \
 nuclei -version;
 ```
 
 > ⚠️ **Note:** Make sure `Go (Golang)` is installed and in your `$PATH`.
+> Also, make sure to install `nuclei` version **3.3.5**.
 
 ---
 
