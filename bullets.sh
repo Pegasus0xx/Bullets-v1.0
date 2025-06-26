@@ -38,7 +38,7 @@ apktool d "$APK_FILE" -o "$APK_FOLDER" &>/dev/null
 
 echo -e "${GREEN}[+] Scanning folder: $APK_FOLDER with nuclei${NC}"
 echo "$APK_FOLDER" | nuclei -t "$NUCLEI_TEMPLATE_PATH" | \
-grep -Pv "(w3|android|github|tensorflow\.org|www\.google\.com|google\.com|mozilla\.org|schemas\.android|goo\.gl|apache\.org|ns\.adobe\.com|schemas\.microsoft\.com|developer\.apple\.com|apple\.com|jetbrains\.com)"
+grep -Pv "(w3\.org|android\.asset|github\.com|tensorflow\.org|www\.google\.com|googleapis\.com|google\.com|mozilla\.org|schemas\.android|goo\.gl|apache\.org|ns\.adobe\.com|schemas\.microsoft\.com|developer\.apple\.com|apple\.com|jetbrains\.com)"
 
 echo -e "${YELLOW}[*] Extracting HTTP Auth credentials from smali files...${NC}"
 
