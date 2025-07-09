@@ -12,7 +12,6 @@
 
 Download the Linux [wrapper script](https://raw.githubusercontent.com/iBotPeaches/Apktool/refs/heads/master/scripts/linux/apktool). (Right click, Save Link As `apktool`)
 Download the [latest version](https://bitbucket.org/iBotPeaches/apktool/downloads) of Apktool.
-Rename the downloaded jar to `apktool.jar`.
 Move both `apktool.jar` and `apktool` to `/usr/local/bin`. (root needed)
 Make sure both files are executable. `(chmod +x)`
 Try running `apktool` via CLI.
