@@ -10,7 +10,7 @@
 
 #### ▪️ Linux
 
-Download the Linux [wrapper script](https://raw.githubusercontent.com/iBotPeaches/Apktool/master/scripts/windows/apktool.bat). (Right click, Save Link As `apktool`)
+Download the Linux [wrapper script](https://raw.githubusercontent.com/iBotPeaches/Apktool/refs/heads/master/scripts/linux/apktool). (Right click, Save Link As `apktool`)
 Download the [latest version](https://bitbucket.org/iBotPeaches/apktool/downloads) of Apktool.
 Rename the downloaded jar to `apktool.jar`.
 Move both `apktool.jar` and `apktool` to `/usr/local/bin`. (root needed)
@@ -41,7 +41,7 @@ You can install it in one of two ways:
 #### 🅐 Go install:
 
 ```bash
-go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@3.3.5
+go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@v3.3.5
 ```
 
 #### 🅑 Manual method:
